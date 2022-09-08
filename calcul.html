@@ -1,9 +1,9 @@
 <div class='my-big-calcul' style='width: 500px; margin: 0 auto; text-align: center; background-color: whitesmoke; padding: 20px; border: 3px solid black;'>
     <div class="operations-blok">
-        <button style='width: 40px; height: 40px; margin: 20px; background-color: pink; border: 3px solid black;'>+</button>
-        <button style='width: 40px; height: 40px; margin: 20px; background-color: pink; border: 3px solid black;'>-</button>
-        <button style='width: 40px; height: 40px; margin: 20px; background-color: pink; border: 3px solid black;'>*</button>
-        <button style='width: 40px; height: 40px; margin: 20px; background-color: pink; border: 3px solid black;'>/</button>
+        <button id='buttPlus' style='width: 40px; height: 40px; margin: 20px; background-color: pink; border: 3px solid black;'>+</button>
+        <button id='buttMinus'style='width: 40px; height: 40px; margin: 20px; background-color: pink; border: 3px solid black;'>-</button>
+        <button id='buttMultiply'style='width: 40px; height: 40px; margin: 20px; background-color: pink; border: 3px solid black;'>*</button>
+        <button id='buttDevide'style='width: 40px; height: 40px; margin: 20px; background-color: pink; border: 3px solid black;'>/</button>
     </div>
     <div class="seperator">
         <hr />
@@ -15,7 +15,13 @@
         </div>
         <div class="input-blok" style='display: block;'>
             <label style='display: inline-block;'>number 2</label>
-            <input type="numberr">
+            <input type="number">
         </div>
     </div>
 </div>
+<script>
+    let buttPlus = document.getElementById('buttPlus');
+    let buttMinus = document.getElementById('buttMinus');
+    let buttMultiply = document.getElementById('buttMultiply');
+    let buttDevide = document.getElementById('buttDevide');
+</script>

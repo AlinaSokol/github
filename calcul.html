@@ -11,11 +11,15 @@
     <div class="inputs-blok"  style='display: block;'>
         <div class='input-blok' style='display: block;'>
             <label style='display: inline-block;'>number 1</label>
-            <input type="number">
+            <input id='number1' type="number">
         </div>
         <div class="input-blok" style='display: block;'>
             <label style='display: inline-block;'>number 2</label>
-            <input type="number">
+            <input id='number2' type="number">
+        </div>
+        <div class='input-blok' style='display: block;'>
+            <label style='display: inline-block;'>result</label>
+            <input id='result' type="number">
         </div>
     </div>
 </div>
@@ -24,4 +28,30 @@
     let buttMinus = document.getElementById('buttMinus');
     let buttMultiply = document.getElementById('buttMultiply');
     let buttDevide = document.getElementById('buttDevide');
+        let input1 = document.getElementById('number1');
+        let input2 = document.getElementById('number2');
+        let rst3 = document.getElementById('result');
+        function getNumber(idNum) {
+            if(idNum == 'number1') {
+                return Number(input1.value);
+            } else if(idNum == 'number2') {
+                return Number(input2.value);
+            } 
+        }
+    function onButtonPlus() {
+        rst3.value = getNumber('number1') + getNumber('number2');
+    }
+    function onButtonMinus() {
+        rst3.value = getNumber('number1') - getNumber('number2');
+    }
+    function onButtonMultiply() {
+        rst3.value = getNumber('number1') * getNumber('number2');
+    }
+    function onButtonDevide() {
+        rst3.value = getNumber('number1') / getNumber('number2');
+    }
+    buttPlus.addEventListener('click', onButtonPlus);
+    buttMinus.addEventListener('click', onButtonMinus);
+    buttMultiply.addEventListener('click', onButtonMultiply);
+    buttDevide.addEventListener('click', onButtonDevide);
 </script>
